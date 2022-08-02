@@ -1,0 +1,16 @@
+#input-field:focus-visible {
+  outline: 3px dashed #e59b7e;
+}
+
+#submit-btn:hover {
+  background: linear-gradient(135deg, #ffd6db, #daa5a5);
+  box-shadow: 0 10px 30px #cea5a7;
+  transform: scale(1.1);
+}
+
+#submit-btn:focus-visible {
+  background: linear-gradient(135deg, #f9dbdb, #daa5a5);
+  box-shadow: 0 10px 40px #c2a1a2;
+  outline: 3px dashed #e59b7e;
+  transform: scale(1.1);
+}

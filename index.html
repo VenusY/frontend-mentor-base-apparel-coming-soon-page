@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <div id="outer-container">
+      <!-- Header with logo -->
+      <header>
+        <img src="images/logo.svg" alt="Base Apparel" id="logo" />
+      </header>
+
+      <!-- Mobile hero image -->
+      <figure id="hero-container--mobile">
+        <img
+          src="images/hero-mobile.jpg"
+          alt="Hero image"
+          class="hero"
+          id="hero--mobile"
+        />
+      </figure>
+
+      <!-- Contains heading, info paragraph, and email input field -->
+      <main>
+        <h1 id="heading">
+          <div id="heading__first-word">WE'RE</div>
+          COMING SOON
+        </h1>
+
+        <p id="info">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+
+        <form novalidate id="email-form">
+          <input type="email" placeholder="Email Address" id="input-field" />
+
+          <img
+            src="images/icon-error.svg"
+            alt="Error icon"
+            class="error-icon--hidden"
+            id="error-icon"
+          />
+
+          <div id="submit-btn__container">
+            <button type="submit" id="submit-btn">
+              <img
+                src="images/icon-arrow.svg"
+                alt="Arrow icon"
+                id="submit-btn__icon"
+              />
+            </button>
+          </div>
+        </form>
+
+        <!-- Form success and error messages -->
+        <p class="form-message error-message--hidden" id="error-message">
+          Please provide a valid email
+        </p>
+
+        <p
+          class="form-message success-message--hidden"
+          id="success-message"
+        ></p>
+      </main>
+    </div>
+
+    <!-- Desktop hero image -->
+    <figure id="hero-container--desktop">
+      <img
+        src="images/hero-desktop.jpg"
+        alt="Hero image"
+        class="hero"
+        id="hero--desktop"
+      />
+    </figure>
+    <script src="js/index.js"></script>
+  </body>
+</html>

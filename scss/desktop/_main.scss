@@ -1,0 +1,107 @@
+@use "../util/functions" as u;
+
+@media screen and (min-width: 1440px) {
+  // Typography
+
+  main {
+    text-align: start;
+  }
+
+  #heading {
+    font-size: u.rem(64);
+    line-height: 1.1;
+  }
+
+  #info {
+    font-size: u.rem(16);
+    line-height: 1.7;
+  }
+
+  #input-field {
+    font-size: u.rem(16);
+  }
+
+  .form-message {
+    font-size: u.rem(14);
+  }
+
+  // Styling
+
+  #outer-container {
+    background: url("../images/bg-pattern-desktop.svg"),
+      linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  // Layout
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  header {
+    padding: u.rem(65) 165px;
+  }
+
+  main {
+    padding: u.rem(65) 165px;
+  }
+
+  form {
+    width: 445px;
+    height: u.rem(56);
+  }
+
+  #outer-container {
+    align-items: flex-start;
+    width: 830px;
+  }
+
+  #outer-container > * {
+    width: 100%;
+    max-width: none;
+  }
+
+  #logo {
+    height: auto;
+  }
+
+  #hero--mobile {
+    display: none;
+  }
+
+  #hero--desktop {
+    display: block;
+    height: 100vh;
+  }
+
+  #heading {
+    margin-bottom: u.rem(24);
+  }
+
+  #info {
+    width: 445px;
+    margin-bottom: u.rem(38);
+  }
+
+  #input-field {
+    padding: 0 30px;
+  }
+
+  #submit-btn {
+    min-width: 100px;
+    height: u.rem(56);
+
+    &__container {
+      min-width: 98px;
+    }
+  }
+
+  .form-message {
+    max-width: 280px;
+    margin: u.rem(10) 0 0 30px;
+  }
+}

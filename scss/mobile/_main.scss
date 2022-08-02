@@ -1,0 +1,192 @@
+@use "../util/functions" as u;
+@use "../util/mixins" as m;
+
+// Typography
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+main {
+  text-align: center;
+}
+
+#heading {
+  font-size: u.rem(40);
+  font-weight: 600;
+  color: var(--dark-grayish-red);
+  word-spacing: 100vw;
+  letter-spacing: u.rem(11);
+  line-height: u.rem(42);
+
+  &__first-word {
+    font-weight: 300;
+    color: var(--desaturated-red);
+  }
+}
+
+#info {
+  font-size: u.rem(14);
+  color: var(--desaturated-red);
+  line-height: 1.6;
+}
+
+#input-field {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: u.rem(14);
+  color: var(--dark-grayish-red);
+}
+
+#input-field::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  color: #dbcbcc;
+}
+
+.form-message {
+  font-size: u.rem(12);
+  text-align: start;
+}
+
+#error-message {
+  color: var(--soft-red);
+}
+
+#success-message {
+  color: #88b28f;
+}
+
+// Styling
+
+body {
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  background-attachment: fixed;
+}
+
+form {
+  border: 1px solid #dbcbcc;
+  border-radius: 1000px; // Pill shape
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+#input-field {
+  background: transparent;
+  border: none;
+  border-radius: 1000px;
+}
+
+#submit-btn {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border-radius: 1000px;
+  box-shadow: 0 10px 40px #e7c0c2;
+}
+
+// Layout
+
+header {
+  padding: u.rem(30);
+}
+
+main {
+  padding: u.rem(65) u.rem(30);
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: u.rem(48);
+}
+
+button {
+  @include m.center-object;
+}
+
+// Contains all content on page
+#outer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#outer-container > * {
+  width: 100%;
+  max-width: u.rem(500);
+}
+
+#logo {
+  display: block;
+  height: u.rem(23);
+}
+
+.hero {
+  display: block;
+}
+
+#hero--mobile {
+  width: 100%;
+}
+
+#hero--desktop {
+  display: none;
+}
+
+#heading {
+  margin-bottom: u.rem(16);
+}
+
+#info {
+  margin-bottom: u.rem(28);
+}
+
+#input-field {
+  width: 100%;
+  height: 100%;
+  padding: 0 24px;
+}
+
+#submit-btn {
+  min-width: 64px;
+  height: u.rem(48);
+  padding: 0;
+  transform: scale(1);
+  position: absolute;
+  // top: -1px;
+  // right: -1px;
+
+  &__icon {
+    font-size: 0; // Removes whitespace under icon
+  }
+
+  &__container {
+    @include m.center-object;
+    order: 2;
+    min-width: 62px;
+    height: 100%;
+    position: relative;
+  }
+}
+
+.error-icon--hidden {
+  display: none;
+}
+
+#error-icon {
+  margin: 0 10px;
+}
+
+.form-message {
+  max-width: 200px;
+  margin: u.rem(10) 80px 0 24px;
+}
+
+.error-message--hidden {
+  display: none;
+}
+
+.success-message--hidden {
+  display: none;
+}
