@@ -43,7 +43,7 @@ const outerContainerHeight = outerContainer.clientHeight;
 const heroImage = document.querySelector("#hero--desktop");
 const heroImageHeight = heroImage.clientHeight;
 
-// If the user is on desktop version of the webpage 
+// If the user is on desktop version of the webpage
 // and container height is greater than image height
 if (desktopMediaQuery.matches && outerContainerHeight > heroImageHeight) {
     // Makes the height of outer container equal to height of hero image
@@ -51,5 +51,3 @@ if (desktopMediaQuery.matches && outerContainerHeight > heroImageHeight) {
     // Only outer container has scrolling instead of entire page
     outerContainer.style.overflow = "auto";
 }
-
-
