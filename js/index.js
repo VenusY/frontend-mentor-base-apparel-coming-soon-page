@@ -15,11 +15,14 @@ form.addEventListener("submit", (e) => {
         errorIcon.classList.remove("error-icon--hidden");
         errorMessage.classList.remove("error-message--hidden");
         successMessage.classList.add("success-message--hidden");
-        form.style.borderColor = "var(--soft-red)";
+        form.classList.add("email-form--invalid");
+        form.classList.remove("email-form--invalid-thick");
 
         // The point at which the webpage design switches from mobile to desktop
         if (desktopMediaQuery.matches) {
-            form.style.borderWidth = "2px";
+            form.classList.add("email-form--invalid-thick");
+            form.classList.remove("email-form--invalid");
+            // Adjust container size to keep the button lined up with the border
             btnContainer.style.minWidth = "96px";
         }
     } else {
@@ -34,7 +37,8 @@ form.addEventListener("submit", (e) => {
         errorIcon.classList.add("error-icon--hidden");
         errorMessage.classList.add("error-message--hidden");
         successMessage.classList.remove("success-message--hidden");
-        form.style.borderColor = null;
+        form.classList.remove("email-form--invalid");
+        form.classList.remove("email-form--invalid-thick");
     }
 });
 

@@ -72,6 +72,14 @@ button {
   border: none;
 }
 
+.email-form--invalid {
+  border: 1px solid var(--soft-red);
+}
+
+.email-form--invalid-thick {
+  border: 2px solid var(--soft-red);
+}
+
 #input-field {
   background: transparent;
   border: none;
